@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Home Page</title>
+    <style>
+        ul{
+            list-style-type: none;
+            width: 30%;
+            margin: auto;
+        }
+        li{
+            width: 200px;
+            border: 1px solid black;
+            padding: 10px;
+            margin: 10px;
+        }
+        .logoutbutoon {
+            text-align: end;
+            padding:10px;
+        }
+        .logoutbutoon button{
+            padding: 5px;
+            background-color: red;
+        }
+        .logoutbutoon button a{
+            text-decoration: none;
+            font-family: Arial, Helvetica, sans-serif;
+
+
+        }
+    </style>
+</head>
+<body>
+    <div class="logoutbutoon">
+        <button><a href="/">logout</a></button>
+    </div>
+
+    <ul > <% data.forEach((i)=>{ %>
+
+        <li> <%= i.Name %> &nbsp; &nbsp; Vote:<%= i.voteCount %></li>
+
+
+        <% }); %>
+    </ul>
+    
+</body>
+</html>
